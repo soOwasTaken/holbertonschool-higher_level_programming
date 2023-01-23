@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-for i in range(0, 8):
-    for j in range(i, 10):
-        if i != j:
-            print("{}{}, ".format(i, j), end='')
-print("89")
+for c in range(97, 123):
+    print("{} is lower")
+    else
+print("{}is upper")
