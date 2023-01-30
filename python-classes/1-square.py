@@ -10,5 +10,5 @@ class Square:
 """Square that defines a square of size 3
 
     Attributes:
-        attr1 (self): self
-        attr2 (:obj:`int`):size of the square."""
+        self (self): self
+        size (:obj:`int`):size of the square."""
