@@ -3,10 +3,10 @@
 
 
 class Square:
-    """Square that defines a square of size 3
+    """Square:
 
     Attributes:
         self (self): self
         size (:obj:`int`):size of the square."""
     def __init__(self, size):
-        self.__size = 3
+        self.__size = None
