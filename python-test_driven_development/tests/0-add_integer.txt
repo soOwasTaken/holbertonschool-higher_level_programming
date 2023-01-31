@@ -30,8 +30,7 @@ Float and negative input:
 Float overflow:
     >>> add_integer(float('inf'),-float('inf'))
     Traceback (most recent call last):
-        File "<stdin>", line 1, in <module>
-        File "<stdin>", line 8, in add_integer
+    ...
     OverflowError: cannot convert float infinity to integer
 
 Float NaN:
