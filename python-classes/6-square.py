@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 """Empty class Square that defines a square"""
+
+
 class Square:
     """Square:
 
     Attributes:
         self (self): self
         size (:obj:`int`):size of the square."""
+
     def __init__(self, size=0, position=(0, 0)):
         """Initialises the data"""
         self.size = size
