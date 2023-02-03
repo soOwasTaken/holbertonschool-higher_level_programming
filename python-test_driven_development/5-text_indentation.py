@@ -6,6 +6,7 @@ def text_indentation(text):
     """Function that indent text"""
     if type(text) != str:
         raise TypeError("text must be a string")
-    new_text = text.replace(".", ".\n\n").replace(
-        "?", "?\n\n").replace(":", ":\n\n")
+    text = text.strip()
+    new_text = text.replace(".", ".\n\n")
+    new_text = new_text.replace("?", "?\n\n").replace(":", ":\n\n")
     print(new_text, end="")
