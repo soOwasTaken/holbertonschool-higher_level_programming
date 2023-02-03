@@ -4,7 +4,8 @@
 
 def matrix_divided(matrix, div):
     """division of every number in the matrix"""
-    if not all(map(lambda x: all(map(lambda y: type(y) in [int, float], x)), matrix)):
+    if not all(map(lambda x: all(map(lambda y:
+                                     type(y) in [int, float], x)), matrix)):
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
     if not all(map(lambda x: len(x) == len(matrix[0]), matrix)):
