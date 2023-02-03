@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Prints the full name"""
+
+
 def say_my_name(first_name, last_name=""):
     """Prints the full name"""
     if not isinstance(first_name, str):
