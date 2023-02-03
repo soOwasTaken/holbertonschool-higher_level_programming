@@ -3,10 +3,11 @@
 
 
 def text_indentation(text):
-    """Function that indent text"""
-    if type(text) != str:
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
-    text = text.strip()
-    new_text = text.replace(".", ".\n\n")
-    new_text = new_text.replace("?", "?\n\n").replace(":", ":\n\n")
-    print(new_text, end="")
+
+    text = text.replace("? ", "?\n\n")
+    text = text.replace(". ", ".\n\n").replace(": ", ":\n\n")
+
+    result = '\n'.join(line.strip() for line in text.splitlines())
+    print(result, end="")
