@@ -20,5 +20,5 @@ def text_indentation(text):
         else:
             current_line += char
     result.append(current_line)
-    print("".join(result))
+    print("".join(result), end="")
 
