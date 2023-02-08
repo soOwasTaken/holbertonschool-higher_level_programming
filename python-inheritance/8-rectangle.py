@@ -20,7 +20,7 @@ class BaseGeometry:
             raise ValueError(f"{value} must be an integer")
 
 class Rectangle(BaseGeometry):
-        """class of Rectangle inherit of BaseGeometry"""
+    """class of Rectangle inherit of BaseGeometry"""
     def __init__(self, width, height):
         BaseGeometry.__init__(self, width, height)
         self.__width = width
