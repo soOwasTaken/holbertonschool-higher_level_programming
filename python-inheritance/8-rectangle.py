@@ -6,6 +6,8 @@ Module that defines a class BaseGeometry
 
 class BaseGeometry:
     """Class BaseGeometry"""
+    def area(self):
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         if type(value) != int:
