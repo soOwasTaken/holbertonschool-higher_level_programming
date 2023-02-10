@@ -4,6 +4,7 @@
 
 class Student:
     """student class with 3 arguments"""
+
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
         self.last_name = last_name
@@ -18,4 +19,3 @@ class Student:
     def reload_from_json(self, json):
         for key in json:
             setattr(self, key, json[key])
-
