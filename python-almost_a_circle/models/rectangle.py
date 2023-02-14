@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """Class Square that inherits from Rectangle"""
-Base = __import__('Base').Base
+from models.base import Base
 
 
 class Rectangle(Base):
     "class Rectangle that inherit Base"
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id)
+        super().__init__("id", id)
         self.width = width
         self.height = height
         self.x = x
