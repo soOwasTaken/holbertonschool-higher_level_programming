@@ -34,6 +34,7 @@ class Rectangle(Base):
         return self._width * self._height
 
     def display(self):
+        """Return the Rectangle printed"""
         for i in range(self._y):
             print()
         for i in range(self._height):
