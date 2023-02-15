@@ -31,6 +31,7 @@ class Square(Rectangle):
         return self.size * self.size
 
     def update(self, *args, **kwargs):
+        """Update by args or kwargs (id, size, x and y.)"""
         if args:
             num_args = len(args)
             if num_args > 0:
