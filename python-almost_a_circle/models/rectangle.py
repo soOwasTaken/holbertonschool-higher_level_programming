@@ -38,10 +38,10 @@ class Rectangle(Base):
         for i in range(self._height):
             print("#" * self._width)
 
-def __str__(self):
-    """Return values of the Rectangle"""
-    return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, + \
-        self._x, self._y, self._width, self._height)
+    def __str__(self):
+        """Return values of the Rectangle"""
+        return "[Rectangle] ({})".format(self.id) + \
+           " {}/{} - {}/{}".format(self._x, self._y, self._width, self._height)
 
     @property
     def width(self):
