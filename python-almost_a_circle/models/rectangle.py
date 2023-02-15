@@ -31,20 +31,20 @@ class Rectangle(Base):
 
     def area(self):
         """Return the area of the rectangle"""
-        return self._width * self._height
+        return self.width * self.height
 
     def display(self):
         """Return the Rectangle printed"""
-        for i in range(self._y):
+        for i in range(self.y):
             print()
-        for i in range(self._height):
-            print(" " * self._x + "#" * self._width)
+        for i in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """Return values of the Rectangle"""
         return "[Rectangle] ({})".format(self.id) + \
-            " {}/{} - {}/{}".format(self._x, self._y,
-                                    self._width, self._height)
+            " {}/{} - {}/{}".format(self.x, self.y,
+                                    self.width, self.height)
 
     def update(self, *args, **kwargs):
         """Update by args or kwargs (id,width,height, x and y.)"""
