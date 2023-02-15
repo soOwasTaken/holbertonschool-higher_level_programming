@@ -41,7 +41,8 @@ class Rectangle(Base):
     def __str__(self):
         """Return values of the Rectangle"""
         return "[Rectangle] ({})".format(self.id) + \
-           " {}/{} - {}/{}".format(self._x, self._y, self._width, self._height)
+            " {}/{} - {}/{}".format(self._x, self._y,
+                                    self._width, self._height)
 
     @property
     def width(self):
