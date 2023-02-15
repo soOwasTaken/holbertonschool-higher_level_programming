@@ -39,8 +39,8 @@ class Rectangle(Base):
             print("#" * self._width)
 
     def __str__(self):
-        return "[Rectangle] ({}) {} - {}".format(id(self), self._x,
-                                                 self._y, self._width, self._height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(id(self), self._x,
+                                               self._y, self._width, self._height)
 
     @property
     def width(self):
