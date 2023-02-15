@@ -7,7 +7,6 @@ class Rectangle(Base):
     "class Rectangle that inherit Base"
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id)
         if not isinstance(x, int):
             raise TypeError("x must be an integer")
         if not isinstance(y, int):
@@ -24,10 +23,11 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         if y < 0:
             raise ValueError("y must be >= 0")
-        self._x = x
-        self._y = y
-        self._width = width
-        self._height = height
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        Base.__init__(self,id)
 
     def area(self):
         """Return the area of the rectangle"""
@@ -48,17 +48,17 @@ class Rectangle(Base):
 
     def update(self, *args):
         """Update by args (id,width,height, x and y.)"""
-        if len(args) > 0 and args[0] is not None:
+        num_args = len(args)
+        if num_args > 0:
             self.id = args[0]
-            args = args[1:]
-        if len(args) > 0:
-            self._width = args[0]
-        if len(args) > 1:
-            self._height = args[1]
-        if len(args) > 2:
-            self._x = args[2]
-        if len(args) > 3:
-            self._y = args[3]
+        if num_args > 1:
+            self.width = args[1]
+        if num_args > 2:
+            self.height = args[2]
+        if num_args > 3:
+            self.x = args[3]
+        if num_args > 4:
+            self.y = args[4]
 
     @property
     def width(self):
