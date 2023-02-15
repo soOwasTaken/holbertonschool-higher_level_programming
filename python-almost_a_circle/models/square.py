@@ -10,7 +10,8 @@ class Square(Rectangle):
         Rectangle.__init__(self, size, size, x, y, id)
 
     def __str__(self):
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size)
+        return "[Square] ({})".format(self.id) + \
+            " {}/{} - {}".format(self.x, self.y, self.size)
 
     @property
     def size(self):
