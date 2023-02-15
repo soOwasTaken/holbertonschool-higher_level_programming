@@ -27,7 +27,7 @@ class Rectangle(Base):
         self.y = y
         self.width = width
         self.height = height
-        Base.__init__(self,id)
+        Base.__init__(self, id)
 
     def area(self):
         """Return the area of the rectangle"""
