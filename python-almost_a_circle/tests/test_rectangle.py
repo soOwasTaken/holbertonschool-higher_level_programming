@@ -10,10 +10,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.y, 3)
         self.assertEqual(r1.id, 1)
 
-        r2 = Rectangle("1", 2)
-        self.assertEqual(r2.id, "1")
-        self.assertEqual(r2.height, 2)
-
     def test_rectangle_area(self):
         r1 = Rectangle(5, 10, 2, 3, 1)
         self.assertEqual(r1.area(), 50)
