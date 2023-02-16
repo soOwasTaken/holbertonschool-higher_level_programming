@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """class Base"""
 import json
-
+from os import path
 
 class Base:
     """class Base"""
