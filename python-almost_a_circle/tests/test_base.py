@@ -18,6 +18,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r2.y, 4)
         self.assertEqual(r2.id, 2)
 
+        r3 = Rectangle("1", 2)
+        self.assertEqual(r3.id, 1)
+        self.assertEqual(r3.height, 2)
+
     def test_area(self):
         r1 = Rectangle(10, 20)
         self.assertEqual(r1.area(), 200)
@@ -59,6 +63,7 @@ class TestRectangle(unittest.TestCase):
             self.assertEqual(s2.x, 2)
             self.assertEqual(s2.y, 1)
             self.assertEqual(s2.id, 4)
+
 
         def test_area(self):
             s1 = Square(5)
