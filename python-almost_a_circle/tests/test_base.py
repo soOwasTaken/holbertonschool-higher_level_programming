@@ -1,22 +1,14 @@
 import unittest
 import os
+from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
 class TestRectangle(unittest.TestCase):
-    """def test_init(self):
-        r1 = Rectangle(10, 20)
-        self.assertEqual(r1.width, 10)
-        self.assertEqual(r1.height, 20)
-        self.assertEqual(r1.x, 0)
-        self.assertEqual(r1.y, 0)
-        self.assertEqual(r1.id, 1)
-        r2 = Rectangle(5, 10, 3, 4, 2)
-        self.assertEqual(r2.width, 5)
-        self.assertEqual(r2.height, 10)
-        self.assertEqual(r2.x, 3)
-        self.assertEqual(r2.y, 4)
-        self.assertEqual(r2.id, 2)"""
+    def test_no_arg(self):
+        b1 = Base()
+        b2 = Base()
+        self.assertEqual(b1.id, b2.id - 1)
 
     def test_area(self):
         r1 = Rectangle(10, 20)
@@ -65,6 +57,10 @@ class TestSquare(unittest.TestCase):
 
         s2 = Square(3, 2, 1, 4)
         self.assertEqual(s2.area(), 9)
+
+"""        s3 = Square(5, 2)
+        self.assertEqual(s3.id, 1)
+        self.assertEqual(s3.size)"""
 
 def test_display(self):
     s1 = Square(3)
