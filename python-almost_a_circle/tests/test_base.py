@@ -17,6 +17,10 @@ class TestRectangle(unittest.TestCase):
         r2 = Rectangle(5, 10, 3, 4, 2)
         self.assertEqual(r2.area(), 50)
 
+    def test_to_json(self):
+        r = Rectangle(10, 7, 2, 8, 6)
+        self.assertEqual(str, type(Base.to_json_string([r.to_dictionary()])))
+
     """ need a test for display here"""
 
     def test_str(self):
