@@ -4,4 +4,3 @@ CREATE TABLE IF NOT EXISTS force_name (
     name VARCHAR(256) NOT NULL,
     PRIMARY KEY (id)
 );
-UPDATE force_name SET name='Python is cool' WHERE id=1;
