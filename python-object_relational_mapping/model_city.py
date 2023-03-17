@@ -1,20 +1,30 @@
 #!/usr/bin/python3
-"""
-Defines the City class
-"""
+"""First state model"""
 
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey
-from model_state import Base
+import MySQLdb
+
+Base = declarative_base()
 
 
 class City(Base):
-    """Representation of a city"""
-    __tablename__ = 'cities'
+    """links to the MySQL table states"""
+    __tablename__ = "cities"
 
-    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
+    id = Column(Integer,
+                autoincrement=True,
+                unique=True,
+                nullable=False,
+                primary_key=True)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
+    state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
 
-    def __str__(self):
-        """Return a string representation of the City instance"""
-        return "{}: ({}) {}".format(self.state.name, self.id, self.name)
+
+if __name__ == "__main__":
+    connection = MySQLdb.connect(
+        host='localhost',
+        port=3306,
+        user="root",
+        password="root"
+        )
