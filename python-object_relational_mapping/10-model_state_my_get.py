@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lists all State objects that contain the letter 'a' from the database hbtn_0e_6_usa"""
+"""Script that prints the State object with the name"""
 
 import sys
 from model_state import State, Base
