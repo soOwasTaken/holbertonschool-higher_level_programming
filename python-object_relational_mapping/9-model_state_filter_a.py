@@ -22,7 +22,8 @@ if __name__ == "__main__":
     session = Session()
 
     # Query for all states containing 'a' ordered by id
-    query = session.query(State).filter(State.name.like('%a%')).order_by(State.id)
+    query = session.query(State).filter(
+        State.name.like('%a%')).order_by(State.id)
 
     # Print all states containing 'a'
     for state in query:
