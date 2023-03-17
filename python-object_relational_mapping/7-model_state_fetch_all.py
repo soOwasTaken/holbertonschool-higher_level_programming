@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-lists all State objects from the database hbtn_0e_6_usa
+lists all State objects from the database test_7
 """
 import sys
-from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
 
 if __name__ == "__main__":
     # get the arguments
