@@ -16,7 +16,7 @@ if __name__ == "__main__":
         user=username,
         password=password,
         database=database
-        )
+    )
 
     cursor = connection.cursor()
     cursor.execute("SELECT * from states ORDER BY id ASC")
