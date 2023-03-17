@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script that changes the name of a State object"""
+"""Script that delete a State object"""
 
 import sys
 from model_state import State, Base
@@ -20,6 +20,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter_by(id=2).first()
-    state.name = "New Mexico"
+    states_to_delete = session.query(State).filter(
+        State.name.like("%a%")
+        ).all()
+    for state in states_to_delete:
+        session.delete(state)
     session.commit()
+    session.close()
